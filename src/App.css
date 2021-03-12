@@ -10,4 +10,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 10px;
+  overflow-x: hidden;
+}
+
+@media (min-width: 720px) {
+  .app {
+    max-width: 100vw;
+  }
 }

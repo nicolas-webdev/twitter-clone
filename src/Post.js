@@ -18,30 +18,24 @@ const Post = ({
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://wersm.com/wp-content/uploads/2017/04/wersm-twitter-egg-broken.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Guy Incognito{" "}
+              {displayName}{" "}
               <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @guy_incognito
+                {verified && <VerifiedUserIcon className="post__badge" />} @
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-              blanditiis, beatae molestiae necessitatibus laudantium provident
-              id esse enim. Non, perspiciatis.
-            </p>
+            <p>{text}</p>
           </div>
         </div>
-        <img
-          src="https://i.pinimg.com/originals/48/a0/37/48a037b61ac1dbd4bd2bf90f8e99613d.gif"
-          alt=""
-        />
+        <img src={image} alt="" />
         <div className="post__footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />

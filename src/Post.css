@@ -15,6 +15,11 @@
   width: 100%;
 }
 
+.post__body > img:hover {
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
 .post__footer {
   display: flex;
   justify-content: space-between;

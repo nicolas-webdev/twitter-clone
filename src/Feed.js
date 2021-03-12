@@ -3,6 +3,7 @@ import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
 import db from "./firebase";
+import FlipMove from "react-flip-move";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -19,24 +20,29 @@ const Feed = () => {
         <h2>Home</h2>
       </div>
       <TweetBox />
-      {posts.map(({ displayName, username, verified, text, avatar, image }) => (
+      <FlipMove>
+        {posts.map(
+          ({ displayName, username, verified, text, avatar, image }, index) => (
+            <Post
+              key={index}
+              displayName={displayName}
+              username={username}
+              verified={verified}
+              text={text}
+              avatar={avatar}
+              image={image}
+            />
+          )
+        )}
         <Post
-          displayName={displayName}
-          username={username}
-          verified={verified}
-          text={text}
-          avatar={avatar}
-          image={image}
+          displayName="Guy Incognito"
+          username="guy_incognito"
+          verified
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus in reiciendis beatae aspernatur tempore. Saepe praesentium culpa omnis tempore."
+          avatar="https://wersm.com/wp-content/uploads/2017/04/wersm-twitter-egg-broken.jpg"
+          image="https://i.pinimg.com/originals/48/a0/37/48a037b61ac1dbd4bd2bf90f8e99613d.gif"
         />
-      ))}
-      <Post
-        displayName="Guy Incognito"
-        username="guy_incognito"
-        verified
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus in reiciendis beatae aspernatur tempore. Saepe praesentium culpa omnis tempore."
-        avatar="https://wersm.com/wp-content/uploads/2017/04/wersm-twitter-egg-broken.jpg"
-        image="https://i.pinimg.com/originals/48/a0/37/48a037b61ac1dbd4bd2bf90f8e99613d.gif"
-      />
+      </FlipMove>
     </div>
   );
 };

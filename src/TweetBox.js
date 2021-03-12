@@ -13,6 +13,7 @@ const TweetBox = () => {
       displayName: "Guy Incognito",
       username: "guy_incognito",
       verified: true,
+      timestamp: new Date(),
       text: tweetMessage,
       image: tweetImage,
       avatar:

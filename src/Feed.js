@@ -19,14 +19,6 @@ const Feed = () => {
         <h2>Home</h2>
       </div>
       <TweetBox />
-      <Post
-        displayName="Guy Incognito"
-        username="guy_incognito"
-        verified
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus in reiciendis beatae aspernatur tempore. Saepe praesentium culpa omnis tempore."
-        avatar="https://wersm.com/wp-content/uploads/2017/04/wersm-twitter-egg-broken.jpg"
-        image="https://i.pinimg.com/originals/48/a0/37/48a037b61ac1dbd4bd2bf90f8e99613d.gif"
-      />
       {posts.map(({ displayName, username, verified, text, avatar, image }) => (
         <Post
           displayName={displayName}
@@ -37,6 +29,14 @@ const Feed = () => {
           image={image}
         />
       ))}
+      <Post
+        displayName="Guy Incognito"
+        username="guy_incognito"
+        verified
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus in reiciendis beatae aspernatur tempore. Saepe praesentium culpa omnis tempore."
+        avatar="https://wersm.com/wp-content/uploads/2017/04/wersm-twitter-egg-broken.jpg"
+        image="https://i.pinimg.com/originals/48/a0/37/48a037b61ac1dbd4bd2bf90f8e99613d.gif"
+      />
     </div>
   );
 };

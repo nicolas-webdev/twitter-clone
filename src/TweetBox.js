@@ -33,6 +33,7 @@ const TweetBox = () => {
             onChange={(e) => setTweetMessage(e.target.value)}
             placeholder="いまどうしてる？"
             type="text"
+            required
           />
         </div>
         <input

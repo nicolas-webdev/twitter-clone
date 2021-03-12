@@ -22,7 +22,7 @@ const Widgets = () => {
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="elonmusk"
-          options={{ height: 800 }}
+          options={{ height: 600 }}
         />
 
         <TwitterShareButton

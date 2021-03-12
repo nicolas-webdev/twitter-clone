@@ -9,6 +9,10 @@ const TweetBox = () => {
 
   const sendTweet = (e) => {
     e.preventDefault();
+    if (tweetMessage === "") {
+      alert("ツイート内容をに入力して下さい");
+      return;
+    }
     db.collection("posts").add({
       displayName: "Guy Incognito",
       username: "guy_incognito",
@@ -33,7 +37,6 @@ const TweetBox = () => {
             onChange={(e) => setTweetMessage(e.target.value)}
             placeholder="いまどうしてる？"
             type="text"
-            required
           />
         </div>
         <input

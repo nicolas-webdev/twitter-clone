@@ -27,11 +27,14 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1120px) {
   .sidebar {
     flex: 0.1;
   }
   .sidebar__tweet {
     width: 10px !important;
+  }
+  .sidebar__tweet span {
+    display: none;
   }
 }

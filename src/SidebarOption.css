@@ -24,3 +24,13 @@
 .sidebarOption--active {
   color: var(--twitter-color);
 }
+
+@media (max-width: 900px) {
+  .sidebarOption > h2 {
+    display: none;
+  }
+
+  .sidebarOption > .MuiSvgIcon-root {
+    font-size: 28px !important;
+  }
+}

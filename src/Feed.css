@@ -28,3 +28,9 @@
   font-size: 20px;
   font-weight: 800;
 }
+
+@media (max-width: 780px) {
+  .feed {
+    flex: 0.9;
+  }
+}

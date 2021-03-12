@@ -17,7 +17,7 @@ const Feed = () => {
   return (
     <div className="feed">
       <div className="feed__header">
-        <h2>Home</h2>
+        <h2>ホーム</h2>
       </div>
       <TweetBox />
       <FlipMove>

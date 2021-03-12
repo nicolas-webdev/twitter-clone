@@ -11,11 +11,11 @@ const Widgets = () => {
     <div className="widgets">
       <div className="widgets__input">
         <SearchIcon className="widgets__searchIcon" />
-        <input type="text" placeholder="Search Twitter" />
+        <input type="text" placeholder="キーワード検索" />
       </div>
 
       <div className="widgets__widgetContainer">
-        <h2>What's hapening</h2>
+        <h2>いまどうしてる？</h2>
 
         <TwitterTweetEmbed tweetId={"1100831364042162176"} />
 

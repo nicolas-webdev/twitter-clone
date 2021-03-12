@@ -18,16 +18,16 @@ const Sidebar = () => {
       <a href="/">
         <TwitterIcon className="sidebar__twitterIcon" />
       </a>
-      <SidebarOption active text="Home" Icon={HomeIcon} />
-      <SidebarOption text="Explore" Icon={SearchIcon} />
-      <SidebarOption text="Notifications" Icon={NotificationsNoneIcon} />
-      <SidebarOption text="Messages" Icon={MailOutlineIcon} />
-      <SidebarOption text="Bookmarks" Icon={BookmarkBorderIcon} />
-      <SidebarOption text="Lists" Icon={ListAltIcon} />
-      <SidebarOption text="Profile" Icon={PermIdentityIcon} />
-      <SidebarOption text="More" Icon={MoreHorizIcon} />
+      <SidebarOption active text="ホーム" Icon={HomeIcon} />
+      <SidebarOption text="話題を検索" Icon={SearchIcon} />
+      <SidebarOption text="通知" Icon={NotificationsNoneIcon} />
+      <SidebarOption text="メッセージ" Icon={MailOutlineIcon} />
+      <SidebarOption text="ブックマーク" Icon={BookmarkBorderIcon} />
+      <SidebarOption text="リスト" Icon={ListAltIcon} />
+      <SidebarOption text="プロフィール" Icon={PermIdentityIcon} />
+      <SidebarOption text="もっと見る" Icon={MoreHorizIcon} />
       <Button variant="outlined" className="sidebar__tweet" fullWidth>
-        Tweet
+        ツイートする
       </Button>
     </div>
   );

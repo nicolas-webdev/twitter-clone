@@ -31,7 +31,7 @@ const TweetBox = () => {
           <input
             value={tweetMessage}
             onChange={(e) => setTweetMessage(e.target.value)}
-            placeholder="What's happening?"
+            placeholder="いまどうしてる？"
             type="text"
           />
         </div>
@@ -39,7 +39,7 @@ const TweetBox = () => {
           value={tweetImage}
           onChange={(e) => setTweetImage(e.target.value)}
           className="tweetBox__imageInput"
-          placeholder="Enter image URL"
+          placeholder="画像URL"
           type="text"
         />
         <Button
@@ -47,7 +47,7 @@ const TweetBox = () => {
           type="submit"
           className="tweetBox__tweetButton"
         >
-          Tweet
+          ツイートする
         </Button>
       </form>
     </div>

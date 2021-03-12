@@ -5,9 +5,7 @@ const SidebarOption = ({ active, text, Icon }) => {
     <div
       className={`sidebarOption ${active && "sidebarOption--active"}`}
       onClick={() =>
-        alert(
-          "This is a test app. Further functionality will be added in the future"
-        )
+        alert("テスト用のサンプルです。新しい機能は後ほど追加されます")
       }
     >
       <Icon />

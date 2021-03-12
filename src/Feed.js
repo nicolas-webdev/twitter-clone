@@ -4,14 +4,17 @@ import TweetBox from "./TweetBox";
 import Post from "./Post";
 import db from "./firebase";
 import FlipMove from "react-flip-move";
+import Loader from "./loader.svg";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("posts").onSnapshot((snapshot) =>
-      setPosts(snapshot.docs.map((doc) => doc.data()))
-    );
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setPosts(snapshot.docs.map((doc) => doc.data()))
+      );
   }, []);
 
   return (
@@ -20,6 +23,17 @@ const Feed = () => {
         <h2>ホーム</h2>
       </div>
       <TweetBox />
+      {posts.length === 0 && (
+        <div className="feed__loader__container">
+          <img
+            alt=""
+            src={Loader}
+            width={100}
+            height={100}
+            className="feed__loader"
+          />
+        </div>
+      )}
       <FlipMove>
         {posts.map(
           ({ displayName, username, verified, text, avatar, image }, index) => (

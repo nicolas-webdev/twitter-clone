@@ -29,6 +29,15 @@
   font-weight: 800;
 }
 
+.feed__loader__container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
 @media (max-width: 780px) {
   .feed {
     flex: 0.9;
